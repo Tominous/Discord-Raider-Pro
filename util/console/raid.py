@@ -13,16 +13,16 @@ import random
 
 #notes
 #required modules
-#pip install youtube_dl
-#pip install pynacl
-#choco install ffmpeg
+pip install youtube_dl
+pip install pynacl
+choco install ffmpeg
 
 class TextSpam():
     def __init__(self, token , prefix= '***', loop=None, bot_count=1, channel_spam= None, messages_to_spam= None):
         self.channel_spam = int(channel_spam)
         self.bot_count = bot_count
         self.loop = loop
-        #asyncio.set_event_loop(self.loop)
+        asyncio.set_event_loop(self.loop)
         self.prefix = prefix
         self.token = token
         self.messages_to_spam = messages_to_spam
